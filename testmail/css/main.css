@@ -1,0 +1,379 @@
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+body{
+	margin:5px;
+	background: #1998a4 no-repeat 0 0  url("../img/background.jpg");
+	background-size: 100%;
+	height: 100vh;
+	background-attachment:fixed;
+}
+.left_icon{
+	color: #ffff;
+	margin-right: 4px;
+	margin-top:2px;
+}
+.m-5{
+	margin:5px;
+}
+.mr-5{
+	margin-right: 5px;
+}
+.green {
+	color:green;
+}
+.delete{
+	color: red;
+}
+.delete:hover{content: "Удалить";}
+.main {
+	display: flex;
+	flex-direction: column;
+	
+}
+.title_test{
+	color: #000000;
+	font-size: 20px;
+}
+
+.header{
+	height: 100px;
+	margin: 5px;
+/*	background: #fff;*/
+/*	background: #1998a4 no-repeat 0 0 / cover url("../img/background.jpg");*/
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 5px;
+	padding-right: 5px;
+/*	position: fixed;*/
+	
+	
+	
+}
+.button {
+  background: #43d0bf;
+  border: 1px solid #2db3a3;
+  color: #ffffff;
+  text-shadow: 0px 1px 0px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  min-width: 100px;
+  margin-right: 10px;
+	
+/*  text-decoration: none;*/
+/*  display: inline-block;*/
+  font-size: 16px;
+}
+.header_title{
+	display: flex;
+	justify-content: flex-start;
+}
+.title{
+	margin: 5px;
+}
+.section_mail{
+	display: flex;
+	
+	justify-content: flex-start;
+/*	flex-direction: row;*/
+}
+.nav{
+	position: relative;
+	margin-right: 0px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	min-height: 664px;
+	/* width: 10%; */
+/*	background: #1998a4 no-repeat 0 0 / cover url("../img/background.jpg");*/
+}
+/*
+th:first-child{
+	border-radius-top-left: 5px;
+	background: black;
+}
+*/
+.menu_title{
+	font-size: 20px;
+	color: #000;
+}
+.container_mails{
+	display: flex;
+	width: 80%;
+}
+.mail{
+	display: flex;
+	
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.container_mail{
+	
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	background: #fff;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.pagination{
+	background: white;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	border-radius: 5px;
+}
+.li_test{
+	color: #fff;
+	font-family: normal 9pt Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 18px;
+}
+.li_test:hover{
+	color: #E0E0E0;
+	font-family: normal 9pt Helvetica, Tahoma, Arial, sans-serif;;
+	font-size: 18px;
+}
+.mails{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	margin-right: 10px;
+}
+
+/*
+.nav_menu{
+	margin: 5px;
+}
+*/
+.table {
+	width: 100%;
+/*	height: 500px;*/
+	margin-bottom: 20px;
+	border-radius: 15px;
+	border: 1px solid #45c9b9;
+	border-collapse: collapse; 
+	
+	
+}
+
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: rgb(34 185 164 / 80%);
+/*	background: #43d0bf;*/
+	color: #fff;
+	font-family: serif;
+/*	border: 1px solid #1998a4;*/
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+	z-index: 2;
+}
+.table tr:hover {
+	background: #efefef;
+	border: 1px solid #dddddd;
+	padding: 5px;
+	z-index: 2;
+}
+
+.table_list {
+	width: 100%;
+/*	height: 500px;*/
+	margin-bottom: 20px;
+	border-radius: 15px;
+	border: 1px solid #45c9b9;
+	border-collapse: collapse; 
+	
+	
+}
+
+.table_list th {
+	font-weight: bold;
+	padding: 5px;
+	background: rgb(34 185 164 / 80%);
+/*	background: #43d0bf;*/
+	color: #fff;
+	font-family: serif;
+/*	border: 1px solid #1998a4;*/
+}
+.table_list td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+	z-index: 2;
+}
+.table_list tr:hover {
+	background: rgb(34 185 164 / 80%);
+	border: 1px solid #6E6565;
+	padding: 5px;
+	z-index: 2;
+}
+.text_msg{
+	background: white;
+	border-radius: 5px;
+	height: 25px;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+.messege{
+	padding:10px;
+  	border-radius:10px;
+	height: 46px;
+}
+.messege_button{
+	
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 25px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #444;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	vertical-align: top;
+	transition: box-shadow 0.2s;
+}
+.btn:focus-visible {
+	border: 1px solid #4c51f9;
+	outline: none;
+}
+.btn:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+.btn:active {
+	background-color: #808080;
+}
+.btn:disabled {
+	background-color: #eee;
+	border-color: #eee;
+	color: #444;
+	cursor: not-allowed;
+}
+.visually-hidden{
+	visibility: hidden;
+}
+
+/*стили скрепки*/
+.example-1 .form-group{padding:1px;margin:1px}
+.example-1 input[type=file]{outline:0;opacity:0;pointer-events:none;user-select:none}
+.example-1 .label{width:20px;border:0.5px dashed grey;border-radius:5px;display:block;padding:1px;transition:border 300ms ease;cursor:pointer;text-align:center}
+/*.example-1 .label i{display:block;font-size:42px;padding-bottom:16px}*/
+.example-1 .label i,.example-1 .label .title{color:#373333;transition:200ms color}
+.example-1 .label:hover{border:2px solid #000}
+.example-1 .label:hover i,.example-1 .label:hover .title{color:#000}
+/*конец стили скрепки*/
+
+.containier_messege{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+/*добавление менеджеров*/
+.container_row{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+.menegers{
+	/* width:40%; */
+	margin:5px;
+}
+.bg_white{
+	background: white;
+	border-radius: 5px;
+	height: 100%;
+}
+.action{
+	/* width:20%; */
+	margin-top: 10px;
+}
+.emails{
+	/* width:40%; */
+	margin:5px;
+	display: flex;
+	flex-direction: column;
+	
+}
+.row{
+	display:flex;
+	flex-direction: row;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	
+}
+.send{
+/*	width:100px;*/
+	height: 30px;
+	background: white;
+	border-radius: 5px;
+	
+}
+/*для списка почты*/
+.text_margin{
+	
+	color: black;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+.pag {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.pag:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.next {
+  
+  background-color: #f1f1f1;
+  color: black;
+ 
+}
+
+.round {
+  border-radius: 50%;
+}
+.pag_{
+	margin-top: 6px;
+	margin-left: 2px;
+}
+.wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+.left_menu_li{
+	margin-bottom: 5px;
+}

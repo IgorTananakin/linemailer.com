@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="header_title">
+				<div class="title">Email</div>
+				<div class="title">Менеджер</div>
+			</div>
+			<div class="header_logout">Выход</div>
+		</div>
+		<div class="section_mail">
+			<div class="nav">
+				<div class="nav_menu">
+					<a href="">Входящие</a>
+				</div>
+			</div>
+			<div class="container_mails">
+				<ul class="conteiner_mail">
+					<li class="mail">
+						<div>Отправитель</div>
+						<div>Тема письма</div>
+						<div>Дата</div>
+					</li>
+					
+					
+				</ul>
+					<div>Отправитель</div>
+					<div>Тема письма</div>
+					<div>Дата</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<ul class="conteiner_mail">
+					<li class="mails">
+						<div class="mail" id="sender">id</div>
+						<div class="mail" id="sender">Отправитель</div>
+						<div class="mail" id="title_mail">Тема письма</div>
+						<div class="mail" id="date">Дата</div>
+					</li>
+					<?php foreach ($result as $overview) {?>
+					<li class="mails">
+						<div class="mail" id="sender"><?php echo $overview->msgno; ?></div>
+						<div class="mail" id="sender"><?php 
+														  //echo $overview->from;
+														 // var_dump($overview->from);
+														  //$s = $overview->from;
+														  if ($overview->from[0] !== '='){ echo $overview->from;} 
+							?></div>
+						<div class="mail" id="title_mail"><?php if ($overview->subject[0] !== '='){echo $overview->subject;} ?></div>
+						<div class="mail" id="date"><?php echo $overview->date; ?></div>
+					</li>
+					<?php }
+							imap_close($mbox);
+							?>
+					
+					
+				</ul>
