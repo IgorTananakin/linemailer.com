@@ -8,7 +8,7 @@ $start = microtime(true);
 //входящие
 $mbox = imap_open(list_folder()[0][0], "tananakinigor98@gmail.com", "uvogewkltnfpuwye")
 or die("can't connect: " . imap_last_error());
-$mail = $_GET['mail'];
+$mail = $_GET['mail']; 
 
 $MC = imap_check($mbox);
 $result1 = imap_search($mbox, 'FROM ' . $_GET['mail'] );

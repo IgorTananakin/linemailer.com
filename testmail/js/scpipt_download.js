@@ -56,7 +56,7 @@ $(document).ready(function(){
 														"</p>" +
 													"</div>" +
 												"</div>" +
-											"</div>" );
+											"</div>" ); 
 					}
 					if (data['name'] == 'send') {
 						$("#test").append("<div class='messege right'>" +
