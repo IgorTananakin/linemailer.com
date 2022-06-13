@@ -8,7 +8,7 @@ $start = microtime(true);
 //входящие
 $mbox = imap_open(list_folder()[0][0], "tananakinigor98@gmail.com", "uvogewkltnfpuwye")
 or die("can't connect: " . imap_last_error());
-$mail = $_GET['mail']; 
+$mail = $_GET['mail'];
 
 $MC = imap_check($mbox);
 $result1 = imap_search($mbox, 'FROM ' . $_GET['mail'] );
@@ -114,30 +114,30 @@ $amt = ceil($total / $limit);
 
 
 
-<div class="prod-list">
+<div class="prod-list ">
 <div class="column" id="test" >
 <?php
-	
+$i = 5;//так как массив отсортирован, то 1 элемент выводится самый последний, а нужно
 foreach ($mas_all_mail as $key => $value) {
 	//foreach ($mas_all_mail[$key] as $res => $value) {
-	if ($key < 4) {
-		if ($mas_all_mail[$key]["name"] === 'incoming') {
+	if ($key < 5) {
+		if ($mas_all_mail[$i - $key]["name"] === 'incoming') {
 ?>
 
 	<div class="messege left trg-left">
 		<div class="msg_l left">
 			<div class="column m-5">
 				<div >
-					<p class="body_msg_l"><?php echo quoted_printable_decode(imap_fetchbody($mbox, $mas_all_mail[$key]['value'],'1'));?></p>
+					<p class="body_msg_l"><?php echo quoted_printable_decode(imap_fetchbody($mbox, $mas_all_mail[$i - $key]['value'],'1'));?></p>
 				</div>
 				<div class="time_msg_l">
-					<p><?php echo gmdate("Y-m-d\ H:i:s\ ", $mas_all_mail[$key]['date']); ?></p>
+					<p><?php echo gmdate("Y-m-d\ H:i:s\ ", $mas_all_mail[$i - $key]['date']); ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 <?php 
-		} else if ($mas_all_mail[$key]["name"] === 'send') {
+		} else if ($mas_all_mail[$i - $key]["name"] === 'send') {
 
 ?>
 
@@ -145,9 +145,9 @@ foreach ($mas_all_mail as $key => $value) {
 		<div class="msg_r right">
 			<div class="column m-5">
 				
-				<p class="body_msg_r"><?php echo quoted_printable_decode(imap_fetchbody($mbox1, $mas_all_mail[$key]['value'],'1'));?></p>
+				<p class="body_msg_r"><?php echo quoted_printable_decode(imap_fetchbody($mbox1, $mas_all_mail[$i - $key]['value'],'1'));?></p>
 				<div class="time_msg">
-					<p ><?php echo gmdate("Y-m-d\ H:i:s\ ", $mas_all_mail[$key]['date']); ?></p>
+					<p ><?php echo gmdate("Y-m-d\ H:i:s\ ", $mas_all_mail[$i - $key]['date']); ?></p>
 				</div>
 			</div>
 		</div>
@@ -155,6 +155,7 @@ foreach ($mas_all_mail as $key => $value) {
 <?php
 		}
 	//}
+
 }	
 }
 ?>
@@ -191,6 +192,7 @@ foreach ($mas_all_mail as $key => $value) {
 			<!-- </form> -->
 <!--			<form class="forms_menedger" action="add_mail.php" method="post">-->
 				<!--				раскоментить в случае чего-->
+				<!-- <p>wqe</p> -->
 				<div class="row" >
 					<input type="hidden" name="mail" atr-mail-id="<?php echo $mail_id; ?>" value="<?php echo $mail_id; ?>">
 					<input type="hidden" name="mail" atr-mail="<?php echo $mail; ?>" value="<?php echo $mail; ?>">

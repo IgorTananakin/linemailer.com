@@ -1,4 +1,4 @@
-
+// window.scrollTo(0, document.body.scrollHeight);
 $(document).ready(function(){
 
 	/* Переменная-флаг для отслеживания того, происходит ли в данный момент ajax-запрос. В самом начале даем ей значение false, т.е. запрос не в процессе выполнения */
@@ -9,12 +9,14 @@ $(document).ready(function(){
 	//var mas = '<?php echo json_encode($mas_all_mail);?>';
 	
 	//alert(tempArray);
+	 window.scrollTo(0, document.body.scrollHeight);
 		/* Используйте вариант $('#more').click(function() для того, чтобы дать пользователю возможность управлять процессом, кликая по кнопке "Дальше" под блоком статей (см. файл index.php) */
 		$(window).scroll(function() {
 	
 			/* Если высота окна + высота прокрутки больше или равны высоте всего документа и ajax-запрос в настоящий момент не выполняется, то запускаем ajax-запрос */
-			if($(window).scrollTop() + $(window).height() >= $(document).height() && !inProgress) {
-	
+			 //if($(window).scrollTop() + $(window).height() >= $(document).height() && !inProgress) {
+			if($(window).scrollTop() + $(window).height() <= $(document).height() && !inProgress) {
+
 			$.ajax({
 				/* адрес файла-обработчика запроса */
 				url: '../testmail/ajax.php',
@@ -42,7 +44,7 @@ $(document).ready(function(){
 				$.each(data, function(index, data) {
 					
 					 if (data['name'] == 'incoming') {
-						$("#test").append("<div class='messege left trg-left'>" +
+						$("#test").prepend("<div class='messege left trg-left'>" +
 											"<div class='msg_l left'>" +
 												"<div class='column m-5'>" +
 													"<div>" +
@@ -59,7 +61,7 @@ $(document).ready(function(){
 											"</div>" ); 
 					}
 					if (data['name'] == 'send') {
-						$("#test").append("<div class='messege right'>" +
+						$("#test").prepend("<div class='messege right'>" +
 												"<div class='msg_r right'>" +
 													"<div class='column m-5'>" +
 														
@@ -81,11 +83,14 @@ $(document).ready(function(){
 					
 					
 					console.log(startFrom );
+					
 				/* Отбираем по идентификатору блок со статьями и дозаполняем его новыми данными */
 				});
-				
+				//window.scrollTo(0, document.body.scrollHeight);
 				/* По факту окончания запроса снова меняем значение флага на false */
 				inProgress = false;
+				window.scrollTo(0, document.body.scrollHeight);
+				
 				// Увеличиваем на 1 порядковый номер массива, с которой надо начинать выборку из массива
 				startFrom += 1;
 				
